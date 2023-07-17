@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -28,7 +29,14 @@ public class ExecutionServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String name = request.getParameter("name");
+		String item_num = request.getParameter("item_num");
+		
+		request.setAttribute("name", name);
+		request.setAttribute("item_num", item_num);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/execution.jsp");
+		rd.forward(request, response);
 	}
 
 }
