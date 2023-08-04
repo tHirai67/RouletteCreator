@@ -1,41 +1,45 @@
-const rouletteItems = document.getElementById('roulette_items_list');
-const addItemButton = document.getElementById('addItem');
-const deleteItemButton = document.getElementById('deleteItem');
-let itemCount = 1;
-
-addItemButton.addEventListener('click', () => {
-	const newRow = createRow();
-	rouletteItems.appendChild(newRow);
-});
-
-deleteItemButton.addEventListener('click', () => {
+//jQuery
+$(function(){
+	
+	// 追加ボタンを押した時のイベントハンドラ
+	$('#addItem').click(function(){
+		var newRow = `
+			<tr class="item">
+        		<td><input type="text" name="item_name[]"></td>
+        		<td><input type="number" name="item_probability[]"></td>
+     			<td><button type="button" name="item_delete[]" id="deleteItem">削除</button></td>
+        	</tr>
+		
+		`;
+		
+		$('#roulette_items_list').append(newRow);
+		
+	});
+	
+	//削除ボタンを押した時のイベントハンドラ
+	$('#roulette_items_list').on('click','#deleteItem',function(){
+		var rows = $('#roulette_items_list').find('.item');
+		if(rows.length > 2){
+			$(this).closest('tr').remove();
+		}else{
+			alert("最低2つの項目が必要です！");
+		}
+		
+	});
+	
+	
+	
 	
 });
 
-function createRow() {
-	const row = document.createElement('tr');
-	row.className = 'item';
-	
-	const itemNumberCell = document.createElement('td');
-	itemNumberCell.textContent = ++itemCount;
-	
-	const itemNameCell = document.createElement('td');
-	const itemNameInput = document.createElement('input');
-	itemNameInput.type = 'text';
-	itemNameInput.name = 'item_name[]';
-	itemNameCell.appendChild(itemNameInput);
-	
-	const  itemProbabilityCell = document.createElement('td');
-	const itemProbabilityInput = document.createElement('input');
-	itemProbabilityInput.type = 'number';
-	itemProbabilityInput.name = 'item_probability[]';
-	itemProbabilityCell.appendChild(itemProbabilityInput);
-	
-	row.appendChild(itemNumberCell);
-	row.appendChild(itemNameCell);
-	row.appendChild(itemProbabilityCell);
-	
-	return row;
-}
+
+
+
+
+
+
+
+
+
 
 

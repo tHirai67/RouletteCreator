@@ -28,7 +28,6 @@
         			<table>
         				<thead>
         					<tr>
-        						<th>項目番号</th>
         						<th>項目名</th>
         						<th>確率</th>
         						<th></th>
@@ -36,7 +35,11 @@
         				</thead>
         				<tbody id="roulette_items_list">
         					<tr class="item">
-        						<td>1</td>
+        						<td><input type="text" name="item_name[]"></td>
+        						<td><input type="number" name="item_probability[]"></td>
+        						<td><button type="button" name="item_delete[]" id="deleteItem">削除</button></td>
+        					</tr>
+        					<tr class="item">
         						<td><input type="text" name="item_name[]"></td>
         						<td><input type="number" name="item_probability[]"></td>
         						<td><button type="button" name="item_delete[]" id="deleteItem">削除</button></td>
@@ -49,6 +52,10 @@
        		</form>
 
         </main>
+        <script 
+			src="https://code.jquery.com/jquery-3.6.1.min.js" 
+			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+			crossorigin="anonymous"></script>
 		<script type="text/javascript" src="js/create.js"></script>
 	</body>
 </html>

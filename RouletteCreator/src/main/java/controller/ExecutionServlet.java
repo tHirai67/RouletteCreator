@@ -29,11 +29,15 @@ public class ExecutionServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name = request.getParameter("name");
-		String item_num = request.getParameter("item_num");
+		String rouletteName = request.getParameter("roulette_name");
+		String rouletteType = request.getParameter("roulette_type");
+		String[] itemName = request.getParameterValues("item_name[]");
+		String[] itemProbabilities = request.getParameterValues("item_probability[]");
 		
-		request.setAttribute("name", name);
-		request.setAttribute("item_num", item_num);
+		request.setAttribute("rouletteName", rouletteName);
+		request.setAttribute("rouletteType", rouletteType);
+		request.setAttribute("itemNames", itemName);
+		request.setAttribute("itemProbabilities", itemProbabilities);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/execution.jsp");
 		rd.forward(request, response);

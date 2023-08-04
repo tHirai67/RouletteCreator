@@ -8,20 +8,48 @@
 	</head>
 	<body>
 		<header>
-			<h1>ルーレットアプリケーション</h1>
+			<h1><%= request.getAttribute("rouletteName") %></h1>
 		</header>
-		<div>
-			<main>
-				<div>
-					<h2>入力情報</h2>
-					名前：<%= request.getParameter("name") %></br>
-					項目数<%= request.getParameter("item_num") %></br>
-				</div>
-				<form action="HomeServlet" method="get">
-					<input type="submit" value="実行"></input>
-				</form>
-			
-			</main>
-		</div>
+		<main>
+			<div>
+				<% 
+					String rouletteType = "";
+					if(request.getAttribute("rouletteType").equals("normal")){
+						rouletteType = "ノーマルモード";
+					}else if(request.getAttribute("rouletteType").equals("cheat")){
+						rouletteType = "チートモード";
+					}
+				%>
+				<p>選択したモード：<%= rouletteType %></p>
+			</div>
+			<div>
+				<% String[] itemNames = (String[]) request.getAttribute("itemNames"); %>
+				<% String[] itemProbabilities = (String[]) request.getAttribute("itemProbabilities"); %>
+				<table>
+					<thead>
+						<tr>
+							<th>ItemName</th>
+							<th>Item Probability</th>
+						</tr>
+					</thead>
+					<tbody>
+						<%
+							for(int i = 0; i < itemNames.length; i++){
+						%>
+						<tr>
+							<td><%= itemNames[i] %></td>
+							<td><%= itemProbabilities[i] %></td>
+						</tr>
+						<% } %>
+					</tbody>
+					
+					
+				</table>
+			</div>
+			<form action="HomeServlet" method="get">
+				<input type="submit" value="実行"></input>
+			</form>
+		
+		</main>
 	</body>
 </html>
