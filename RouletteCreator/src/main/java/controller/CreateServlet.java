@@ -20,6 +20,11 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/CreateServlet")
 public class CreateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("/create.jsp");
+		rd.forward(request, response);
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String rouletteName = request.getParameter("roulette_name");
