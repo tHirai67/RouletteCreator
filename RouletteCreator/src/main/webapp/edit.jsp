@@ -5,6 +5,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>RouletteCounterApplication</title>
+		<link rel="stylesheet" href="./css/base.css"></link>
+		<link rel="stylesheet" href="./css/create.css"></link>
 	</head>
 	<body>
 		<header>
@@ -48,6 +50,12 @@
         		<input type="hidden" name="roulette_id" value="<%= request.getAttribute("rouletteId")%>">
         		<input type="submit" id="create" value="作成"></input>
        		</form>
+       		<td>
+       			<form action="DeleteServlet" method="post">
+               		<input type="hidden" name="roulette_id" value="<%= request.getAttribute("rouletteId") %>">
+               		<input type="submit" id="delete_btn" value="削除"></input>
+               	</form>
+            </td>
 
         </main>
         <script 

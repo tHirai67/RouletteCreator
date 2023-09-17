@@ -34,6 +34,8 @@
 		   });
 		 
 		 </script>
+		 <link rel="stylesheet" href="./css/base.css"></link>
+		 <link rel="stylesheet" href="./css/execution.css"></link>
 		
 	</head>
 	<body>
@@ -42,7 +44,7 @@
 		</header>
 		<main>	
 			<div id="roulette_container">
-				<% String[] itemNames = (String[]) request.getAttribute("itemNames"); %>
+				<% String[] itemNames = (String[]) request.getAttribute("rouletteItemList"); %>
 				<div class="roulette">
 					<% for(int i = 0; i < itemNames.length; i++){ %>
 						<div class="roulette_item" style="height:250px; width:250px;"><%= itemNames[i] %></div>

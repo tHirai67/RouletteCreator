@@ -1,38 +1,6 @@
 @charset "UTF-8";
 
-.content {
-	margin: auto 200px;
+#title_img img{
+	width: 100%;
+	height: auto;
 }
-
-.container {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 20px;
-	
-}
-
-aside{
-	grid-column: 1 / 2;
-	background-color: white;
-	height: 100vh;
-}
-
-main{
-	grid-column: 2 / 4;
-	background-color: white;
-	height: 100vh;
-	
-}
-
-
-header {
-	border: 10px;
-	background-color: white;
-	padding: 5px;
-	margin:10px auto;
-}
-
-body{
-	background-color: antiquewhite;
-}
-

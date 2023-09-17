@@ -85,7 +85,7 @@ public class EditServlet extends HttpServlet {
 		
 		
 		request.setAttribute("rouletteName", rouletteName);
-		request.setAttribute("itemNames", rouletteItems);
+		request.setAttribute("rouletteItemList", rouletteItems);
 		
 		Properties properties = new Properties();
 		try(InputStream is = getClass().getClassLoader().getResourceAsStream("database.properties")){

@@ -17,19 +17,28 @@
 				});
 			});
 		</script>
+		<link rel="stylesheet" href="./css/base.css"></link>
+		<link rel="stylesheet" href="./css/home.css"></link>
 	</head>
 	<body>
 		<header>
 			<h1>ルーレットアプリケーション</h1>
 		</header>
-		<div>
-			<aside>
+		<div id="title_img">
+			<img src="./image/roulette.jpg">
+		</div>
+		<main>
+			<div id="side">
 				<h2>アプリケーション説明</h2>
-				<p>アプリの説明</p>
-			</aside>
-			<main>
+				<p>このアプリケーションは，入力フォームに選択肢となる項目を入れることで，簡単にルーレットを作成いたします．<br></p>
+				<ul>
+					<li>新しくルーレットを作成する場合は「作成」ボタン</li>
+					<li>すでにあるルーレットを編集・削除する場合は「編集」ボタン</li>
+					<li>すでにあるルーレットを実行する場合は「実行」ボタン</li>		
+				</ul>
+			</div>
+			<div id="roulette_list">
 				<h2>ルーレットリスト</h2>
-				<div id="roulette_list">
 				<table>
 					<thead>
 						<tr>
@@ -47,15 +56,14 @@
 		                    <td><%= roulette.getRouletteName() %></td>
 		                    <td><%= roulette.getDate() %></td>
 		                    <td>
+		                    	<form action="ExecutionServlet" method="get">
+		                    		<input type="hidden" name="roulette_id" value="<%= roulette.getId() %>">
+		                    		<input type="submit" value="実行"></input>
+		                    	</form>
+		                    <td>
 		                    	<form action="EditServlet" method="get">
 		                    		<input type="hidden" name="roulette_id" value="<%= roulette.getId() %>">
 		                    		<input type="submit" value="編集"></input>
-		                    	</form>
-		                    </td>
-		                    <td>
-		                    	<form action="DeleteServlet" method="post">
-		                    		<input type="hidden" name="roulette_id" value="<%= roulette.getId() %>">
-		                    		<input type="submit" id="delete_btn" value="削除"></input>
 		                    	</form>
 		                    </td>
 						</tr>
@@ -65,12 +73,11 @@
 					</tbody>
 				</table>
 			</div>
-				
-				<form action="CreateServlet" method="get">
-					<input type="submit" value="作成"></input>
-				</form>
 			
-			</main>
-		</div>
+			<form action="CreateServlet" method="get">
+				<input type="submit" value="作成"></input>
+			</form>
+		
+		</main>
 	</body>
 </html>

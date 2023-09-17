@@ -4,7 +4,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>RouletteCounterApplication</title>
-		
+		<link rel="stylesheet" href="./css/base.css"></link>
+		<link rel="stylesheet" href="./css/create.css"></link>
 	</head>
 	<body>
 		<header>

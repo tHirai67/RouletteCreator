@@ -31,7 +31,7 @@ public class CreateServlet extends HttpServlet {
 		String[] rouletteItems = request.getParameterValues("item_name[]");
 		
 		request.setAttribute("rouletteName", rouletteName);
-		request.setAttribute("itemNames", rouletteItems);
+		request.setAttribute("rouletteItemList", rouletteItems);
 		
 		Properties properties = new Properties();
 		try(InputStream is = getClass().getClassLoader().getResourceAsStream("database.properties")){
