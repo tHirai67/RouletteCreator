@@ -21,7 +21,7 @@
         		</div>
         		<div id="roulette_items">
         			<h2>ルーレット項目</h2>
-        			<table>
+        			<table class="table-design">
         				<thead>
         					<tr>
         						<th>項目名</th>
@@ -31,17 +31,17 @@
         				<tbody id="roulette_items_list">
         					<tr class="item">
         						<td><input type="text" name="item_name[]" class="item_name"></td>
-        						<td><button type="button" name="item_delete[]" class="deleteItem">削除</button></td>
+        						<td><button type="button" name="item_delete[]" class="deleteItem btn">削除</button></td>
         					</tr>
         					<tr class="item">
         						<td><input type="text" name="item_name[]" class="item_name"></td>
-        						<td><button type="button" name="item_delete[]" class="deleteItem">削除</button></td>
+        						<td><button type="button" name="item_delete[]" class="deleteItem btn" class="btn">削除</button></td>
         					</tr>
         				</tbody>
         			</table>
         		</div>
-        		<button type="button" id="addItem">項目を追加</button> 
-        		<input type="submit" id="create" value="作成"></input>
+        		<button type="button" id="addItem" class="btn">項目を追加</button> <br>
+        		<input type="submit" id="create" value="作成" class="btn"></input>
        		</form>
 
         </main>

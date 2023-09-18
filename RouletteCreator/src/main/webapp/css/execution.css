@@ -4,3 +4,16 @@
 	background-color:rgb(55, 55, 55);
 	text-align:center;
 }
+
+#roulette_container {
+    display: flex;
+    justify-content: center; /* 水平方向に中央配置 */
+    align-items: center; /* 垂直方向に中央配置 */
+}
+
+.roulette {
+    display: flex; /* roulette_item を水平に並べるために flex を使用 */
+    flex-wrap: wrap; /* 要素が横幅を超えた場合に折り返す */
+    justify-content: center; /* roulette_item を水平方向に中央配置 */
+    align-items: center; /* roulette_item を垂直方向に中央配置 */
+}

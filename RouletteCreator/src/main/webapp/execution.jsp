@@ -53,14 +53,13 @@
 			</div>
 			<div class="btn_container">
 				<p>
-					<button class="start">Start</button>
-					<button class="stop">Stop</button>
+					<button class="start btn">Start</button>
+					<button class="stop btn">Stop</button>
 				</p>
 			</div>
 			
 			<div>
-				
-				<table>
+				<table class="table-design">
 					<thead>
 						<tr>
 							<th>ItemName</th>
@@ -80,7 +79,7 @@
 				</table>
 			</div>
 			<form action="HomeServlet" method="get">
-				<input type="submit" value="ホームへ戻る"></input>
+				<input type="submit" value="ホームへ戻る" class="btn"></input>
 			</form>
 			
 		</main>

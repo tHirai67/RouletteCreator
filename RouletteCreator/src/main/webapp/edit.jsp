@@ -22,7 +22,7 @@
         		</div>
         		<div id="roulette_items">
         			<h2>ルーレット項目</h2>
-        			<table>
+        			<table class="table-design">
         				<thead>
         					<tr>
         						<th>項目名</th>

@@ -5,6 +5,8 @@ body {
 	color: whitesmoke;
 	width:100%;
 	margin:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
 }
 
 header{
@@ -17,7 +19,7 @@ header{
 main{
 	background-color: rgb(55, 55, 55);
 	padding: 20px;
-	margin:20px 20px;
+	margin:20px 100px;
 	text-align: center;
 	box-shadow: 0px 10px 15px 2px rgba(0, 0, 0, 0.2);
 }
@@ -30,4 +32,64 @@ table{
 	margin:3px auto;
 }
 
+/* button design*/
+.btn{
+    background: #eee;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.btn:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.2s ease-in-out;
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+.btn:hover {
+    background: #313131;
+    color: #FFF;
+}
 
+
+/* table design*/
+.table-design {
+ width: 100%;
+ text-align: center;
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+.table-design tr:nth-child(2n+1) {
+ background: rgb(10, 31, 4);
+}
+.table-design tr:nth-child(2n) {
+ background: rgb(52, 24, 19);
+}
+.table-design th {
+ padding: 10px;
+ background: rgb(48, 48, 48);
+ border-right: solid 1px rgb(210, 210, 210);
+ color: #ffffff;
+}
+.table-design th:last-child,
+.table-design th:nth-child(3){
+ border-right: none;
+}
+.table-design td {
+ padding: 10px;
+ border-right: solid 1px rgb(210, 210, 210); 
+}
+.table-design td:last-child,
+.table-design td:nth-child(3) {
+ border-right: none;
+}

@@ -6,7 +6,7 @@ $(function(){
 		var newRow = `
 			<tr class="item">
         		<td><input type="text" name="item_name[]" class="item_name"></td>
-     			<td><button type="button" name="item_delete[]" class="deleteItem">削除</button></td>
+     			<td><button type="button" name="item_delete[]" class="deleteItem btn">削除</button></td>
         	</tr>
 		
 		`;
