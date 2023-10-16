@@ -50,7 +50,7 @@
 					<% String[] itemNames = (String[]) request.getAttribute("rouletteItemList"); %>
 					<div class="roulette">
 						<% for(int i = 0; i < itemNames.length; i++){ %>
-							<div class="roulette_item" style="height:400px; width:400px;"><%= itemNames[i] %></div>
+							<div class="roulette_item" style="height:200px; width:200px;"><%= itemNames[i] %></div>
 						<% } %>
 					</div>
 				</div>

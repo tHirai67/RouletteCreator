@@ -63,15 +63,17 @@ table{
  border-collapse: collapse;
  border-spacing: 0;
 }
-.table-design td {
- padding: 10px 0px;
-}
+
 
 
 /* PC */
 @media screen and (min-width: 768px){
 	main{
 		margin:20px 300px;
+	}
+	
+	.table-design td {
+	 padding: 10px 0px;
 	}
 }
 
@@ -85,8 +87,19 @@ table{
 	h1{
 		font-size: 30px;
 	}
+	
 	h2{
 		font-size: 25px;
+	}
+	
+	.table-design td {
+		font-size: 20px;
+		padding: 10px 0px;
+	}
+	
+	.btn{
+		font-size: 10%;
+		width: 10%;
 	}
 
 }

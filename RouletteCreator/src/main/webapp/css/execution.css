@@ -1,74 +1,152 @@
 @charset "UTF-8";
 
-main{
+/* PC　*/
+@media screen and (min-width: 768px){
+	main{
+		border-radius: 10px;
+		padding: 10px;
+	}
+	
+	h2, h3{
+		margin: 0 10px;
+	}
+	
+	#roulette-area, #rouletteList-area{
+		background-color:rgb(55, 55, 55);
+		border-radius: 10px;
+		margin: 20px;
+		padding: 10px;
+	}
+	
+	.roulette_item {
+		text-align:center;
+		font-size: 150%;
+	}
+	
+	#roulette_container {
+	    display: flex;
+	    justify-content: center; /* 水平方向に中央配置 */
+	    align-items: center; /* 垂直方向に中央配置 */
+	}
+	
+	.roulette {
+		background-color:whitesmoke;
+		margin: 30px;
+		border-radius: 10px;
+		color: rgb(55, 55, 55);
+	    display: flex; /* roulette_item を水平に並べるために flex を使用 */
+	    flex-wrap: wrap; /* 要素が横幅を超えた場合に折り返す */
+	    justify-content: center; /* roulette_item を水平方向に中央配置 */
+	    align-items: center; /* roulette_item を垂直方向に中央配置 */
+	}
+	
+	.start{
+		margin-left: 70%;
+	}
+	
+	.stop{
+		margin-right: 70%;
+	}
+	
+	.btn_container{
+		display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    grid-template-rows: auto;
+	    gap: 20px;
+	}
+	
+	.grid-item1{
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+	
+	.grid-item2{
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+	}
+	
+	.btn{
+		border-radius: 10px;
+		font-size: 20px;
+		width: 25%;
+		height: auto;
+	}	
+}
+
+/* SmartPhone */
+@media screen and (max-width: 768px){
+	main{
 	border-radius: 10px;
 	padding: 10px;
-}
+	}
+	
+	h2, h3{
+		margin: 0 10px;
+	}
+	h3{
+		font-size: 20px;
+	}
+	
+	#roulette-area, #rouletteList-area{
+		background-color:rgb(55, 55, 55);
+		border-radius: 10px;
+		margin: 20px;
+		padding: 10px;
+	}
+	
+	.roulette_item {
+		text-align:center;
+		font-size: 100%;
+	}
+	
+	#roulette_container {
+	    display: flex;
+	    justify-content: center; /* 水平方向に中央配置 */
+	    align-items: center; /* 垂直方向に中央配置 */
+	}
+	
+	.roulette {
+		background-color:whitesmoke;
+		margin: 30px;
+		border-radius: 10px;
+		color: rgb(55, 55, 55);
+	    display: flex; /* roulette_item を水平に並べるために flex を使用 */
+	    flex-wrap: wrap; /* 要素が横幅を超えた場合に折り返す */
+	    justify-content: center; /* roulette_item を水平方向に中央配置 */
+	    align-items: center; /* roulette_item を垂直方向に中央配置 */
+	}
+	
+	.start{
+		margin-left: 50%;
+	}
+	
+	.stop{
+		margin-right: 50%;
+	}
+	
+	.btn_container{
+		display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    grid-template-rows: auto;
+	    gap: 20px;
+	}
+	
+	.grid-item1{
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+	
+	.grid-item2{
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+	}
+	
+	.btn{
+		border-radius: 10px;
+		font-size: 20px;
+		width: 45%;
+		height: auto;
+	}
 
-h2, h3{
-	margin: 0 10px;
-}
-
-#roulette-area, #rouletteList-area{
-	background-color:rgb(55, 55, 55);
-	border-radius: 10px;
-	margin: 20px;
-	padding: 10px;
-}
-
-.roulette_item {
-	text-align:center;
-	font-size: 70px;
-}
-
-#roulette_container {
-    display: flex;
-    justify-content: center; /* 水平方向に中央配置 */
-    align-items: center; /* 垂直方向に中央配置 */
-}
-
-.roulette {
-	background-color:whitesmoke;
-	margin: 30px;
-	border-radius: 10px;
-	color: rgb(55, 55, 55);
-    display: flex; /* roulette_item を水平に並べるために flex を使用 */
-    flex-wrap: wrap; /* 要素が横幅を超えた場合に折り返す */
-    justify-content: center; /* roulette_item を水平方向に中央配置 */
-    align-items: center; /* roulette_item を垂直方向に中央配置 */
-}
-
-.start{
-	margin-left: 70%;
-}
-
-.stop{
-	margin-right: 70%;
-}
-
-.btn_container{
-	display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-}
-
-.grid-item1{
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
-}
-
-.grid-item2{
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-
-.btn{
-	border-radius: 10px;
-	font-size: 20px;
-	width: 25%;
-	height: auto;
-}
-
-
+} 
 
