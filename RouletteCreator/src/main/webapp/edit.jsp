@@ -4,58 +4,58 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>RouletteCounterApplication</title>
 		<link rel="stylesheet" href="./css/base.css"></link>
 		<link rel="stylesheet" href="./css/create.css"></link>
 	</head>
 	<body>
 		<header>
-        		<h1>ルーレット編集</h1>
+        		<h1>Roulette Application</h1>
         </header>
         <main>
         	<% String rouletteName = (String) request.getAttribute("rouletteName"); %>
+        	<h2>ルーレット編集</h2>
         	<form action="EditServlet" method="post" >
-        		<div id="roulette_name">
-        			 <h2>ルーレット名</h2>
-        			 	<input type="text" name="roulette_name" id="roulette_name_form" value="<%= rouletteName %>">
+        		<div id="roulette_name" class="grid-container">
+        				<span class="grid-item1">ルーレット名</span>
+        			 	<input type="text" name="roulette_name" id="roulette_name_form" value="<%= rouletteName %>" class="grid-item2">
         			 </div>
         		</div>
-        		<div id="roulette_items">
-        			<h2>ルーレット項目</h2>
-        			<table class="table-design">
-        				<thead>
-        					<tr>
-        						<th>項目名</th>
-        						<th></th>
-        					</tr>
-        				</thead>
-        				<tbody id="roulette_items_list">
-        					<% List<String> itemNames = (List<String>) request.getAttribute("rouletteItemList"); 
-        					if(itemNames != null){
-        						for (String name : itemNames){
-        						
-        					%>
-								<tr class="item">
-	        						<td><input type="text" name="item_name[]" class="item_name" value="<%= name %>"></td>
-	        						<td><button type="button" name="item_delete[]" class="deleteItem">削除</button></td>
-	        					</tr>
-							<% } 
-								
-        					}	%>
-							</div>
-        				</tbody>
-        			</table>
-        		</div>
-        		<button type="button" id="addItem">項目を追加</button> 
+        		<hr>
+        		<div class="grid-container">
+        			<span class="grid-item1">ルーレット項目</span>
+	        		<div id="roulette_items" class="grid-item2">        			
+	        			<table class="table-design">      
+	        				<tbody id="roulette_items_list">
+	        					<% List<String> itemNames = (List<String>) request.getAttribute("rouletteItemList"); 
+	        					if(itemNames != null){
+	        						for (String name : itemNames){
+	        						
+	        					%>
+									<tr class="item">
+		        						<td><input type="text" name="item_name[]" class="item_name" value="<%= name %>"></td>
+		        						<td><button type="button" name="item_delete[]" class="deleteItem btn">削除</button></td>
+		        					</tr>
+								<% } 
+									
+	        					}	%>
+								</div>
+	        				</tbody>
+	        			</table>
+	        		</div>
+	        	</div>
+        		<button type="button" id="addItem" class="btn">項目を追加</button><br>
+        		<span id="caution">二つ以上の項目が必要です．</span>
+        		<hr>
         		<input type="hidden" name="roulette_id" value="<%= request.getAttribute("rouletteId")%>">
-        		<input type="submit" id="create" value="作成"></input>
+        		<input type="submit" id="create" value="実行する" class="btn"></input><br>
        		</form>
-       		<td>
-       			<form action="DeleteServlet" method="post">
-               		<input type="hidden" name="roulette_id" value="<%= request.getAttribute("rouletteId") %>">
-               		<input type="submit" id="delete_btn" value="削除"></input>
-               	</form>
-            </td>
+       		<form action="DeleteServlet" method="post">
+           		<input type="hidden" name="roulette_id" value="<%= request.getAttribute("rouletteId") %>">
+           		<input type="submit" id="delete_btn" value="ルーレットを削除する" class="btn"></input>
+           	</form>
+       		
 
         </main>
         <script 

@@ -4,6 +4,7 @@
 <html">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>RouletteCounterApplication</title>
 		<!-- css -->
 		<link rel="stylesheet" href="./css/execution.css"></link>
@@ -16,7 +17,7 @@
 		  // initialize!
 			var option = {
 				speed : 10,
-				duration : 5,
+				duration : 999,
 		        //stopItemNumber : 0,
 			}
 			$('div.roulette').roulette(option);	
@@ -40,29 +41,31 @@
 	</head>
 	<body>
 		<header>
-			<h1><%= request.getAttribute("rouletteName") %></h1>
+			<h1>Roulette Application</h1>
 		</header>
-		<main>	
-			<div id="roulette_container">
-				<% String[] itemNames = (String[]) request.getAttribute("rouletteItemList"); %>
-				<div class="roulette">
-					<% for(int i = 0; i < itemNames.length; i++){ %>
-						<div class="roulette_item" style="height:250px; width:250px;"><%= itemNames[i] %></div>
-					<% } %>
+		<main>
+			<div id="roulette-area">
+				<h2><%= request.getAttribute("rouletteName") %></h2>	
+				<div id="roulette_container">
+					<% String[] itemNames = (String[]) request.getAttribute("rouletteItemList"); %>
+					<div class="roulette">
+						<% for(int i = 0; i < itemNames.length; i++){ %>
+							<div class="roulette_item" style="height:400px; width:400px;"><%= itemNames[i] %></div>
+						<% } %>
+					</div>
+				</div>
+				<div class="btn_container">
+					<button class="start btn grid-item1">Start</button>
+					<button class="stop btn grid-item2">Stop</button>
 				</div>
 			</div>
-			<div class="btn_container">
-				<p>
-					<button class="start btn">Start</button>
-					<button class="stop btn">Stop</button>
-				</p>
-			</div>
 			
-			<div>
+			<div id="rouletteList-area">
+				<h3>項目リスト</h3>
 				<table class="table-design">
 					<thead>
 						<tr>
-							<th>ItemName</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -70,18 +73,15 @@
 							for(int i = 0; i < itemNames.length; i++){
 						%>
 						<tr>
-							<td><%= itemNames[i] %></td>
+							<td><li><%= itemNames[i] %></td>
 						</tr>
 						<% } %>
 					</tbody>
-					
-					
 				</table>
 			</div>
-			<form action="HomeServlet" method="get">
+			<form action="HomeServlet" method="get" class="grid-item1">
 				<input type="submit" value="ホームへ戻る" class="btn"></input>
 			</form>
-			
 		</main>
 	</body>
 </html>

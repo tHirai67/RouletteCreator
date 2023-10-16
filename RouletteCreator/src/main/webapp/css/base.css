@@ -1,79 +1,30 @@
 @charset "UTF-8";
 
-/* PC */
-@media screen and (min-width: 768px){
-	body {
-		background-color: rgb(43, 43, 43);
-		color: whitesmoke;
-		width:100%;
-		margin:0;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 30px;
-	}
-	
-	header{
-		background-color: rgb(55, 55, 55);
-		padding: 20px;
-		margin:auto;
-	}
-	
-	
-	main{
-		background-color: rgb(55, 55, 55);
-		margin:20px 250px;
-		padding-bottom: 30px;
-		text-align: center;
-		box-shadow: 0px 10px 15px 2px rgba(0, 0, 0, 0.2);
-	}
-	
-	h1{
-		margin: 0;
-	}
-	
-	table{
-		margin:3px auto;
-	}
+body{
+	background-color: rgb(55, 55, 55);
+	color: whitesmoke;
+	width:100%;
+	margin:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
 }
 
-/* Smartphone */
-@media screen and (max-width: 768px){
-	body {
-		background-color: rgb(43, 43, 43);
-		color: whitesmoke;
-		width:100%;
-		margin:0;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 30px;
-	}
-	
-	header{
-		background-color: rgb(55, 55, 55);
-		padding: 20px;
-		margin:auto;
-	}
-	
-	
-	main{
-		background-color: rgb(55, 55, 55);
-		margin:20px 20px;
-		text-align: center;
-		box-shadow: 0px 10px 15px 2px rgba(0, 0, 0, 0.2);
-	}
-	
-	h1{
-		margin: 0;
-		font-size: 30px;
-	}
-	h2{
-		font-size: 25px;
-	}
-	
-	table{
-		margin:3px auto;
-	}
+header{
+	background-color: rgb(43, 43, 43);
+	padding: 5px 20px;
+	margin: 10px 0;
 }
 
+main{
+	background-color: rgb(43, 43, 43);
+	text-align: center;
+	box-shadow: 0px 10px 15px 2px rgba(0, 0, 0, 0.2);
+	padding-bottom: 20px;
+}
 
+table{
+	margin:3px auto;
+}
 
 /* button design*/
 .btn{
@@ -112,27 +63,34 @@
  border-collapse: collapse;
  border-spacing: 0;
 }
-.table-design tr:nth-child(2n+1) {
- background: rgb(10, 31, 4);
-}
-.table-design tr:nth-child(2n) {
- background: rgb(52, 24, 19);
-}
-.table-design th {
- padding: 10px;
- background: rgb(48, 48, 48);
- border-right: solid 1px rgb(210, 210, 210);
- color: #ffffff;
-}
-.table-design th:last-child,
-.table-design th:nth-child(3){
- border-right: none;
-}
 .table-design td {
- padding: 10px;
- border-right: solid 1px rgb(210, 210, 210); 
+ padding: 10px 0px;
 }
-.table-design td:last-child,
-.table-design td:nth-child(3) {
- border-right: none;
+
+
+/* PC */
+@media screen and (min-width: 768px){
+	main{
+		margin:20px 300px;
+	}
 }
+
+/* Smartphone */
+@media screen and (max-width: 768px){
+	
+	main{
+		margin:20px 20px;
+	}
+	
+	h1{
+		font-size: 30px;
+	}
+	h2{
+		font-size: 25px;
+	}
+
+}
+
+
+
+

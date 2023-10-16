@@ -1,14 +1,42 @@
 @charset "UTF-8";
 
+h2{
+	padding:10px;
+}
+
 main #title_img img{
-		width: 100%;
-		height: auto;
-	}
+	width: 100%;
+	height: auto;
+}
 
 #explain{
-	text-align: left;
-	font-size: 15px;
+	background-color: rgb(55, 55, 55);
+	margin: 30px;
+	padding-bottom: 20px;
+	border-radius: 10px;
 }
+
+#roulette_list{
+	background-color: rgb(55, 55, 55);
+	margin: 20px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+}
+
+#explain-content{
+	font-size: 15px;
+	text-align: left;
+}
+
+#create_btn{
+	border-radius: 10px;
+	font-size: 20px;
+	width: 15%;
+	height: auto;
+}
+
+
+
 
 
 
